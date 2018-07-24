@@ -19,5 +19,8 @@
   "homepage": "https://github.com/NorthwooDzp/fullstack-master#readme",
   "dependencies": {
     "express": "^4.16.3"
+  },
+  "devDependencies": {
+    "@types/express": "^4.16.0"
   }
 }
