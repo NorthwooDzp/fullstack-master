@@ -7,23 +7,20 @@ module.exports.login = (req, res) => {
             password: req.body.password
         });
     } else {
-        res.status(401).send('User is not authorized')
+        res.status(401).send('User is not authorized');
     }
 
 };
 
-module.exports.register = (req, res) => {
-    if (!req.body.email || !req.body.password) {
-        res.status(400)
-    }
-    const user = new User({
-        email: req.body.email,
-        password: req.body.password
-    });
-    user.save()
-        .then(() => {
-            res.status(200).send({
-                success: true
-            });
+module.exports.register = async function (req, res) {
+    const candidate = await User.findOne({email: req.body.email});
+    if (candidate) {
+        // send error
+        res.status(409).json({
+            message: 'User with this email already exist'
         });
-};
+    } else {
+
+    }
+}
+;
