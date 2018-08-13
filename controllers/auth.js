@@ -3,7 +3,7 @@ const jwt = require('jsonwebtoken');
 const keys = require('../config/keys');
 const User = require('../models/User');
 
-module.exports.login = async function (req, res) {
+module.exports.login = async (req, res) => {
     if (!req.body.email || !req.body.password) {
         sendBadRequest(req, res);
     } else {
@@ -16,11 +16,11 @@ module.exports.login = async function (req, res) {
                     email: candidate.email,
                     id: candidate._id
                 }, keys.jwtStr, {
-                    expiresIn: 60*120
+                    expiresIn: 60 * 120
                 });
                 res.status(200).json({
                     token: `Bearer ${token}`
-                })
+                });
             } else {
                 res.status(401).json({
                     message: 'Incorrect Password. Try again'
@@ -35,7 +35,7 @@ module.exports.login = async function (req, res) {
 
 };
 
-module.exports.register = async function (req, res) {
+module.exports.register = async (req, res) => {
     if (!req.body.email || !req.body.password) {
         sendBadRequest(req, res);
     } else {
@@ -62,7 +62,7 @@ module.exports.register = async function (req, res) {
     }
 };
 
-module.exports.checkEmail = async function (req, res) {
+module.exports.checkEmail = async (req, res) => {
     if (!req.body.email) {
         sendBadRequest(req, res);
     } else {
@@ -75,7 +75,7 @@ module.exports.checkEmail = async function (req, res) {
     }
 };
 
-function sendBadRequest(req, res) {
+const sendBadRequest = (req, res) => {
     if (!req.body.email && !req.body.password) {
         res.status(400).json({
             message: 'Email and password are required!'
@@ -89,4 +89,4 @@ function sendBadRequest(req, res) {
             message: 'Password is required'
         });
     }
-}
+};
