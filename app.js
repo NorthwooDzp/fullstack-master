@@ -10,6 +10,7 @@ const analyticsRoutes = require('./routes/analytics');
 const positionRoutes = require('./routes/position');
 
 app.use(passport.initialize());
+
 app.use(require('morgan')('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
