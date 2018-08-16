@@ -1,8 +1,11 @@
 const express = require('express');
-const router = express.Router();
+const passport = require('passport');
 const controller = require('../controllers/category');
+const router = express.Router();
 
-router.get('/', controller.getAll);
+const guard = passport.authenticate('jwt', {session: false});
+
+router.get('/', guard, controller.getAll);
 router.get('/:id', controller.getById);
 router.delete('/:id', controller.remove);
 router.post('/', controller.create);
