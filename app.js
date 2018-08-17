@@ -19,10 +19,13 @@ app.use(passport.initialize());
 
 require('./middleware/passport')(passport);
 
+
+const guard = passport.authenticate('jwt', {session: false});
+
 app.use('/api/auth', authRoutes);
-app.use('/api/order', orderRoutes);
-app.use('/api/analytics', analyticsRoutes);
-app.use('/api/category', categoryRoutes);
-app.use('/api/position', positionRoutes);
+app.use('/api/order', guard, orderRoutes);
+app.use('/api/analytics', guard, analyticsRoutes);
+app.use('/api/category', guard, categoryRoutes);
+app.use('/api/position', guard, positionRoutes);
 
 module.exports = app;
