@@ -7,7 +7,8 @@ const storage = multer.diskStorage({
     },
     filename(req, file, callback) {
         const date = moment().format('DD_MM_YYYY-HHmmss_SSS');
-        callback(null, `${file.originalname}-${date}`);
+        console.log(file);
+        callback(null, `${date}_${file.originalname}`);
     }
 });
 

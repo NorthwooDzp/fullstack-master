@@ -14,14 +14,14 @@ app.use(require('morgan')('dev'));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: true}));
 app.use(require('cors')());
-
 app.use(passport.initialize());
 
 require('./middleware/passport')(passport);
 
-
 const guard = passport.authenticate('jwt', {session: false});
 
+
+app.use('/uploads', express.static('uploads'));
 app.use('/api/auth', authRoutes);
 app.use('/api/order', guard, orderRoutes);
 app.use('/api/analytics', guard, analyticsRoutes);
