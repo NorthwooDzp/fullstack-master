@@ -21,6 +21,7 @@ require('./middleware/passport')(passport);
 const guard = passport.authenticate('jwt', {session: false});
 
 
+app.use('/', express.static('client/dist'));
 app.use('/uploads', express.static('uploads'));
 app.use('/api/auth', authRoutes);
 app.use('/api/order', guard, orderRoutes);
