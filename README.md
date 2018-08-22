@@ -4,6 +4,7 @@ This project was created using MEAN (MongoDB, Express, Angular, NodeJS) stack.
 
 ## Data Structures
 
+Entity | Fields
 --- | ---
 User | `email: string,      password: string`
 Category |
