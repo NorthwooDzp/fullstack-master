@@ -13,8 +13,6 @@ Order | {date: number (Date), order: number, list: {name: string, quantity: numb
 
 
 
-
-
 ## Api calls
 
 All request bodies should be in JSON format (if another format is not specified)
@@ -37,3 +35,8 @@ Create Category | `POST (multipart/form-data)` | `/api/category/`| {name: string
 Update Category | `PUT` | `/api/category/{category_id}` | {name?: string, image?: file} | Category
 
 ##### ? - optional fields
+
+### Position
+
+Action | Method | Path | Request Body | Response
+--- | --- | --- | --- | ---
