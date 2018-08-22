@@ -3,7 +3,7 @@
 This project was created using MEAN (MongoDB, Express, Angular, NodeJS) stack.
 
 ## Data Structures
-
+User | `email: string, password`
 
 
 ## Api calls
@@ -12,8 +12,9 @@ This project was created using MEAN (MongoDB, Express, Angular, NodeJS) stack.
 
 Action | Method | Path | Request Body | Response
 --- | --- | --- | --- | ---
-Registration | `POST` | `/api/auth/register` | `email: String,      password: String` | `email: String,     password: String (encrypted)`
-Authorization | `POST` | `/api/auth/login` | `email: String,         password: String` | `token: Bearer <token>`
+Registration | `POST` | `/api/auth/register` | `email: string,      password: string` | `email: String,
+password: String (encrypted)`
+Authorization | `POST` | `/api/auth/login` | `email: string,         password: string` | `token: Bearer <token>`
 
 ### Category
 
