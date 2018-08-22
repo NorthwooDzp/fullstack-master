@@ -2,7 +2,27 @@ const errorHandler = require('../utils/errorHandler');
 const Order = require('../models/Order');
 
 module.exports.getAll = async (req, res) => {
-    const query = {};
+    const query = {
+        user: req.user.id
+    };
+
+    if (req.query.start) {
+        query.date = {
+            $gte: req.query.start
+        }
+    }
+
+    if (req.query.end) {
+        if (!query.date) {
+            query.date = {}
+        }
+        query.date.$lte = req.query.end;
+    }
+
+    if (req.query.order) {
+        query.order = Number(req.query.order)
+    }
+
     try {
         const orders = await Order
             .find(query)
