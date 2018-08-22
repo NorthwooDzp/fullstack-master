@@ -41,4 +41,7 @@ Update Category | `PUT` | `/api/category/{category_id}` | {name?: string, image?
 
 Action | Method | Path | Request Body | Response
 --- | --- | --- | --- | ---
-Get list of all Positions by selected Category | `GET` | `/api/position` | -- | Position
+Get list of all Positions by selected Category | `GET` | `/api/position` | -- | Position[ ]
+Create Position | `POST` | `/api/position` | {name: string, cost: number, category: string (categoryId)} | Position
+Update Position | `PUT` | `/api/position/{position_id}` | {name?: string, cost?: string, category: string (categoryId)} | Position
+Delete Position | `DELETE` | `/api/position{position_id}` | -- | --
