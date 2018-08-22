@@ -41,3 +41,4 @@ Update Category | `PUT` | `/api/category/{category_id}` | {name?: string, image?
 
 Action | Method | Path | Request Body | Response
 --- | --- | --- | --- | ---
+Get list of all Positions by selected Category | `GET` | `/api/position` | -- | Position
