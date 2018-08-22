@@ -3,7 +3,9 @@
 This project was created using MEAN (MongoDB, Express, Angular, NodeJS) stack.
 
 ## Data Structures
-User | `email: string, password`
+--- | ---
+User | `email: string,      password: string`
+Category |
 
 
 ## Api calls
