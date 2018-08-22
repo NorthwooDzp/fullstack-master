@@ -11,14 +11,16 @@ Category | {name: string, imageSrc: string, user: string (UserId)}
 Position | {name: string, cost: number, category: string (CategoryId), user: string (UserId)}
 Order | {date: number (Date), order: number, list: {name: string, quantity: number, cost: number}[ ]}
 
-  
+
+
+
   
 
 ## Api calls
 
 All request bodies should be in JSON format (if another format is not specified)
 
-### Auth
+### Authorization
 
 Action | Method | Path | Request Body | Response
 --- | --- | --- | --- | ---
@@ -34,8 +36,7 @@ Get Category | `GET` | `/api/category/{category_id}` | -- | Category
 Delete Category | `DELETE` | `/api/category/{category_id}` | -- | --
 Create Category | `POST (multipart/form-data)` | `/api/category/`| {name: string, image: file} | Category
 Update Category | `PUT` | `/api/category/{category_id}` | {name?: string, image?: file} | Category
-
-##### ? - optional fields
+[? - optional fields]
 
 ### Position
 
@@ -43,5 +44,14 @@ Action | Method | Path | Request Body | Response
 --- | --- | --- | --- | ---
 Get list of all Positions by selected Category | `GET` | `/api/position` | -- | Position[ ]
 Create Position | `POST` | `/api/position` | {name: string, cost: number, category: string (categoryId)} | Position
-Update Position | `PUT` | `/api/position/{position_id}` | {name?: string, cost?: string, category: string (categoryId)} | Position
+Update Position | `PUT` | `/api/position/{position_id}` | {name?: string, cost?: string, category?: string (categoryId)} | Position
 Delete Position | `DELETE` | `/api/position{position_id}` | -- | --
+[? - optional fields]
+### Orders
+
+Action | Method | Path | Query | Request Body | Response
+--- | --- | --- | --- | --- | ---
+
+
+
+[? - optional fields]
