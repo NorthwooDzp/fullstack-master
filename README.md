@@ -7,7 +7,7 @@ This project was created using MEAN (MongoDB, Express, Angular, Node) stack.
 ### Auth calls
 
 Action | Method | Path | Request Body | Response
-=== | === | === | === | ===
+--- | --- | --- | --- | ---
 Registration | `POST` | `/api/auth/register` | `email: String,` | `email: String,`
 ||`password: String`|`password: String (encrypted)`
 ---|---|---|---|---
