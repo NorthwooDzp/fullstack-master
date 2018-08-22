@@ -18,7 +18,7 @@ Position | {}
 Action | Method | Path | Request Body | Response
 --- | --- | --- | --- | ---
 Registration | `POST` | `/api/auth/register` | {email: string, password: string} | {email: String, password: String (encrypted)}
-Authorization | `POST` | `/api/auth/login` | {email: string, password: string} | {token: Bearer <token>}
+Authorization | `POST` | `/api/auth/login` | {email: string, password: string} | {token: Bearer \<token\>}
 
 ### Category
 
