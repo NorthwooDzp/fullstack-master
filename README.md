@@ -31,4 +31,7 @@ Action | Method | Path | Request Body | Response
 Get list of all Categories | `GET` | `/api/category/` | -- | Category[ ]
 Get Category | `GET` | `/api/category/{category_id}` | -- | Category
 Delete Category | `DELETE` | `/api/category/{category_id}` | -- | --
-Create Category | 'POST' (multipart/form-data) | `/api/category/`| {name: string, image: file, user: string (UserId)} | Category
+Create Category | `POST (multipart/form-data)` | `/api/category/`| {name: string, image: file} | Category
+Update Category | `PUT` | `/api/category/{category_id}` | {name?: string, image?: file} | Category
+
+##### ? - optional fields
