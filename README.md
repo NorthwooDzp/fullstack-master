@@ -36,6 +36,7 @@ Get Category | `GET` | `/api/category/{category_id}` | -- | Category
 Delete Category | `DELETE` | `/api/category/{category_id}` | -- | --
 Create Category | `POST (multipart/form-data)` | `/api/category/`| {name: string, image: file} | Category
 Update Category | `PUT` | `/api/category/{category_id}` | {name?: string, image?: file} | Category
+
 [? - optional fields]
 
 ### Position
@@ -46,6 +47,7 @@ Get list of all Positions by selected Category | `GET` | `/api/position` | -- | 
 Create Position | `POST` | `/api/position` | {name: string, cost: number, category: string (categoryId)} | Position
 Update Position | `PUT` | `/api/position/{position_id}` | {name?: string, cost?: string, category?: string (categoryId)} | Position
 Delete Position | `DELETE` | `/api/position{position_id}` | -- | --
+
 [? - optional fields]
 ### Orders
 
