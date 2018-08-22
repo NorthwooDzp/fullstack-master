@@ -11,7 +11,8 @@ Category | {name: string, imageSrc: string, user: string (UserId)}
 Position | {name: string, cost: number, category: string (CategoryId), user: string (UserId)}
 Order | {date: number (Date), order: number, list: {name: string, quantity: number, cost: number}[ ]}
 
-
+  
+  
 
 ## Api calls
 
