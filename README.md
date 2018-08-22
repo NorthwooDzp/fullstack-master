@@ -9,7 +9,7 @@ Name | Fields
 User | {email: string, password: string}
 Category | {name: string, imageSrc: string, user: string (UserId)}
 Position | {name: string, cost: number, category: string (CategoryId), user: string (UserId)}
-Order | {date: number (Date), order: number, list: {name: string, quantity: number, cost: number}[]}
+Order | {date: number (Date), order: number, list: {name: string, quantity: number, cost: number}[ ]}
 
 ###
 
@@ -28,7 +28,7 @@ Authorization | `POST` | `/api/auth/login` | {email: string, password: string} |
 
 Action | Method | Path | Request Body | Response
 --- | --- | --- | --- | ---
-Get list of all Categories | `GET` | `/api/category/` | -- | Category[]
+Get list of all Categories | `GET` | `/api/category/` | -- | Category[ ]
 Get Category | `GET` | `/api/category/{category_id}` | -- | Category
 Delete Category | `DELETE` | `/api/category/{category_id}` | -- | --
-Create Category | `POST` (multipart/form-data) | `/api/category/`| {name: string, image: file, user: string (UserId)} | Category
+Create Category | 'POST' (multipart/form-data) | `/api/category/`| {name: string, image: file, user: string (UserId)} | Category
