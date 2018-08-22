@@ -8,14 +8,4 @@ This project was created using MEAN (MongoDB, Express, Angular, Node) stack.
 
 Method | Path | Request Body | Response
 --- | --- | --- | ---
-`POST` | /api/auth/register | ```javascript
-{
-    email: String,
-    password: String
-}
-```
-| ```javascript
-{
-    email: String,
-    password: String (encrypted)
-}
+`POST` | /api/auth/register | ```javascript {email: String, password: String}```| ```javascript{    email: String,    password: String (encrypted)}
