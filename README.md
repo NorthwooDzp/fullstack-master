@@ -4,7 +4,7 @@ This project was created using MEAN (MongoDB, Express, Angular, Node) stack.
 
 ## Api calls
 
-###Auth calls
+### Auth calls
 
 Action | Method | Path | Request Body | Response
 --- | --- | --- | --- | ---
