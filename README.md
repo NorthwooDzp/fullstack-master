@@ -58,5 +58,4 @@ Action | Method | Path | Query | Request Body | Response
 Get orders | `GET` | `/api/order` | start?, end?, order?, offset?, limit? | -- | Order[ ]
 Create Order | `POST` | `/api/order` | -- | {list: {name: string, quantity: number, cost: number}} | Order
 
-
 `? - optional fields`
